@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Using responsive YouTube video on your website</title>
+<meta name="KeyWords" content="html5, video, movies, video, video, youtube, .mov, mov, avi, mp3, wmv, mpg, mov, midi, video, ram, video, movies, movie, object, embed, movie, mov, wmv, mpg, trailer, windows media, youtube, you tube">
+<meta name="Description" content="Youtube video embedding for websites or Allwebco HTML web templates.">
+
+<meta name="viewport" content="width=device-width">
+
+<link rel="stylesheet" href="style-support.css" type="text/css">
+
+
+
+
+<!-- START YOUTUBE CSS CODE -->
+
+<style type="text/css">
+
+.youtube-width {
+	max-width: 600px;
+	min-width: 200px;
+	margin: 30px auto 30px auto; /* AUTO CENTERS THE VIDEO + TOP/BOTTOM MARGINS */
+	}
+
+.youtube-container {
+	padding-top: 0px;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	position: relative;
+	z-index: 100;
+	}
+
+.youtube-container iframe,
+.youtube-container object,
+.youtube-container embed {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 101;
+	}
+
+</style>
+
+<!-- END YOUTUBE CSS CODE -->
+
+
+
+
+<link rel="stylesheet" href="media-queries.css" type="text/css">
+
+<script type="text/javascript" src="javascripts/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="javascripts/javascripts.js"></script>
+
+</head>
+
+<body>
+<div class="pagewrapper">
+
+<script type="text/javascript" src="javascripts/header-support.js"></script>
+
+<script type="text/javascript" src="javascripts/menu-support.js"></script>
+
+<!-- C-O -->
+<div id="contentbox" class="pageheight">
+
+<!-- C-L -->
+<div id="left-content"><div class="content-area">
+
+
+
+
+
+
+<h1 class="title">YouTube Video Help</h1>
+
+<h2 class="subtitle">Embedding YouTube video code on websites</h2>
+
+<div class="page-splits"></div>
+
+<a href="https://allwebcodesign.com/setup/addons-HTML5-video-player.htm"><img src="picts/video-HTML5-addon.jpg" class="rimage" alt="Plugin For HTML5 Video"></a><br>
+
+<br><br>
+
+<span class="colortitle">Getting YouTube video code</span><br>
+
+YouTube video can be added to any website, to any of the webpages, or you can optionally replace the default Allwebco template videos with YouTube videos. See the <span class="black">help.html</span> included with your template download for the correct setup info and support links.
+
+<br>
+
+<div class="youtube-width">
+<div class="youtube-container">
+<iframe src="https://youtu.be/bH78OiCJTzw" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+
+<ul class="list">
+
+<li> The above example is responsive.
+
+<li> Setup a <a href="https://www.youtube.com/">YouTube account</a> and follow the instructions in your account to add your videos on YouTube for public viewing.
+
+<li> On YouTube, open any one of your video pages and right click the video. Choose "Copy embed code", which will copy the code to your computer clipboard. You can then paste that code into any of your HTML pages.
+
+<li> If you have an Allwebco template, and are setting up the video htm pages, replace only the following highlighted code.
+
+<br><br>
+
+<span class="code">
+
+&lt;iframe src="http://www.youtube.com/embed/<span class="red">6tQR8HIOU1g</span>?rel=0<br>&amp;autoplay=1&amp;loop=0&amp;wmode=opaque"
+
+</span>
+
+<br><br>
+
+...or replace the following line if you now have HTML5 video:
+
+<br><br>
+
+<span class="code">
+
+&lt;script type="text/javascript" src="video-1/video-1.js"&gt;&lt;/script&gt;
+
+<br><br>
+
+</span>
+
+</ul>
+
+<br>
+
+<span class="colortitle">Making the video responsive</span><br>
+
+If you have a responsive Allwebco template with video, your YouTube code will already be responsive. To have your videos flex in size on mobile devices: remove the height and width code from the YouTube embed code.
+
+<br><br>
+
+<span class="smalltitle">Step #1:</span> Place 2 divs around the Youtube iFrame code with class names like the following:
+
+<br><br>
+
+<span class="code">
+
+<span class="red">&lt;div class="youtube-width"&gt;<br>
+&lt;div class="youtube-container"&gt;</span><br>
+&lt;iframe src="https://www.youtube.com/embed/52LXnHLyTLA" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;<br>
+<span class="red">&lt;/div&gt;<br>
+&lt;/div&gt;</span>
+
+</span>
+
+<br><br>
+
+<span class="smalltitle">Step #2:</span> Select, copy, and paste the following code into your global .css file like the style.css at the bottom.
+
+<br><br>
+
+<span class="code">
+
+.youtube-width {<br>
+		max-width: 500px;<br>
+		min-width: 200px;<br>
+		margin: 30px auto 30px auto; /* AUTO CENTERS THE VIDEO + TOP/BOTTOM MARGINS */<br>
+		}<br><br>
+
+.youtube-container {<br>
+		padding-top: 0px;<br>
+		padding-bottom: 56.25%;<br>
+		height: 0;<br>
+		overflow: hidden;<br>
+		position: relative;<br>
+		z-index: 100;<br>
+		}<br><br>
+ 
+.youtube-container iframe,<br>
+.youtube-container object,<br>
+.youtube-container embed {<br>
+		width: 100%;<br>
+		height: 100%;<br>
+		position: absolute;<br>
+		top: 0;<br>
+		left: 0;<br>
+		z-index: 101;<br>
+		}<br>
+
+</span>
+
+<br><br>
+
+If you do <span class="red">not</span> have a global .css file, copy and paste the step #2 css code above and paste it into your webpage just before the &lt;/head&gt; tag between tags &lt;style type="text/css"&gt; and &lt;/style&gt;. View the source code of this webpage to see how this css can be added.
+
+<br><br>
+
+<span class="black">Adjust</span> the max-width and margins in the css code to your desired styles. Adjust the "z-index" number higher or lower if objects are layering over or under your video.
+
+<br><br><br>
+
+<div class="page-splits"></div>
+
+<br>
+
+<span class="colortitle">YouTube video play options (parameters)</span><br>
+
+The "?rel=0" at the end of the video link name is for showing related videos. If set to "?rel=1" it will show related videos at the end of play, if set to "?rel=0" it will not show the related videos. Other options are available. Here is an example:
+
+<br><br>
+
+<span class="code">
+
+src="https://www.youtube.com/embed/<br>
+6tQR8HIOU1g<span class="red">?rel=0&amp;autoplay=1&amp;loop=0&amp;wmode=opaque</span>"
+
+</span>
+
+<br><br>
+
+In the above example related videos are set to "0" to not show related, autoplay is set to "1" for yes, looping is set at "0" to not loop the video and the wmode is set to opaque to allow drop menus (and other floated elements) to display over the video.
+
+<br><br>
+
+<span class="red">Note:</span> In some cases you may need to use ?wmode=transparent or &amp;wmode=transparent if there already is a parameter.<br>
+
+<br><br>
+
+Use a ? at the start of the first parameter or variable, and use a &amp; for all parameters you add after the first one. See <a href="https://developers.google.com/youtube/player_parameters">Google Developers YouTube Embedded Players and Player Parameters</a> for more options.
+
+<br><br>
+
+<div class="page-splits"></div>
+
+<br><br>
+
+<span class="colortitle">Adding YouTube video in a .js file</span><br>
+
+The following is an example of how to add YouTube video code to a .js file like a "sidebar.js" by adding <span class="red">document.write('</span> to the start of each of the 3 lines and <span class="red">');</span> at the end of each of the 3 lines (example code may wrap on this page).
+
+<br><br><br>
+
+<span class="code">
+
+<span class="red">document.write('</span>&lt;div class="youtube-width"&gt;<span class="red">');</span><br>
+<span class="red">document.write('</span>&lt;div class="youtube-container"&gt;<span class="red">');</span><br>
+<span class="red">document.write('</span>&lt;iframe src="https://www.youtube.com/embed/52LXnHLyTLA" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;<span class="red">');</span><br>
+<span class="red">document.write('</span>&lt;/div&gt;<span class="red">');</span><br>
+<span class="red">document.write('</span>&lt;/div&gt;<span class="red">');</span><br>
+
+</span>
+
+<br>
+
+The above code works with the responsive css code shown above on this page.
+
+<br><br><br>
+
+<span class="colortitle"><span class="rednobold">Error:</span> Video does not work - YouTube error:</span><br>
+
+It appears that YouTube has finally fixed this issue on their website. In some cases the copied code from YouTube may not work because there is a minor error in the YouTube embed code. The exact error is a missing "https:" that you may need to add as shown highlighted in red in the code below:
+
+<br><br>
+
+<span class="code">
+
+<span class="red">https://</span>www.youtube.com/embed/52LXnHLyTLA
+
+</span>
+
+<br><br><br><br><br>
+
+<span class="smalltitle">Related Topics:</span><br>
+<a href="S_video_options.htm">Website Video Options</a><br>
+<a href="S_video_movie.htm">HTML5 Video</a><br>
+
+<br><br>
+
+<span class="smalltitle">Related Websites:</span><br>
+
+<a href="http://www.htmlgoodies.com/tutorials/web_graphics/article.php/3480061/How-To-Add-a-YouTube-Video-to-Your-Web-Site.htm">How To Add a YouTube Video to Your Web Site</a><br>
+
+<br><br>
+
+
+
+
+
+
+<br><br>
+
+</div></div>
+<!-- C-L -->
+
+
+
+
+
+
+<!-- START SIDEBAR -->
+
+<div id="sidebar-content" class="SB-background"><div class="content-sidebar">
+
+<script type="text/javascript" src="javascripts/sidebar-support.js"></script>
+
+<br>
+
+<div class="sidebox sbw-2"><div class="sb-pad">
+
+<a href="S_video_options.htm">Video Options Overview</a><br>
+
+<a href="S_video_movie.htm">Responsive Website Video Code</a><br>
+
+<a href="S_video_streaming.htm">Streaming Video</a><br>
+
+<div class="sideon">YouTube Video<br></div>
+
+<a href="https://allwebcodesign.com/setup/addons-HTML5-video-player.htm">HTML5 Video Player Add-on</a><br>
+
+<a href="S_welcome_add.htm">Responsive Video Popup Add-on</a>
+
+<div class="sidebox-split"></div>
+
+<a href="S_videos-not-working.htm">Video Not Working</a><br>
+
+<a href="S_gallery_files.htm">Gallery for Video Display</a><br>
+
+<div class="sidebox-split"></div>
+
+<a href="scripts.html">Free Scripts &amp; Add-ons</a><br>
+
+</div></div>
+
+<br>
+
+<a href="http://square-peach.com/"><img src="picts/square-peach-music.jpg" height="240" width="240" alt="Royalty Free Music For Video"></a><br>
+
+<br><br>
+
+<!-- START GOOGLY ADS -->
+<div class="googleads gaw-2">
+
+<div class="ga">
+<a href="https://allwebcodesign.com/html5-templates.htm" class="GOOGLElink">What is HTML5?</a>
+Understanding HTML5 and CSS3 used in web layouts and RWD websites.<br>
+</div>
+
+<div class="ga">
+<a href="https://allwebcodesign.com/setup/addons-HTML5-video-player.htm" class="GOOGLElink">Video Plugin</a>
+HTML5 video player application website template addon.<br>
+</div>
+
+<div class="ga">
+<a href="http://square-peach.com/" class="GOOGLElink">Square Peach Stock Music</a>
+Royalty free music for websites, movies, film and YouTube video projects.<br>
+</div>
+
+<div class="ga">
+<a href="https://allwebcodesign.com/website-templates/S06-Bizzy-drop-menus.htm" class="GOOGLElink">Business Designs</a>
+Adaptive mobile compliant web templates with integrated video.<br>
+</div>
+
+<div class="googleadsft">&nbsp;<br></div></div>
+<!-- END GOOGLY ADS -->
+
+<br><br>
+
+<a href="http://square-peach.com/"><img src="picts/music-butt.gif" height="170" width="240" alt="Royalty Free Music"></a><br>
+
+<br>
+
+
+
+<br>
+
+</div></div>
+<!-- S-B -->
+
+
+<!-- CLEAR FLOATS -->
+<div class="floatclear"></div>
+
+
+</div>
+<!-- C-O -->
+
+
+<div id="page-counter">
+<script type="text/javascript" src="https://allwebco-templates.com/cgi-bin/counter.pl/XXXyoutube.cnt"></script>
+</div>
+
+<script type="text/javascript" src="javascripts/footer-support.js"></script>
+
+</div>
+</body>
+</html>
